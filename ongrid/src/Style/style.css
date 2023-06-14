@@ -1,0 +1,556 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav {
+  width: 1000px;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  /* background-color: #d35d54; */
+
+  font-size: large;
+  font-style: italic;
+  font-weight: 400;
+}
+.logo {
+  width: 100px;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+.link ::selection {
+  background-color: #34d0d0;
+}
+.navbar {
+  height: 100px;
+}
+.navbody {
+  border: 1px solid black;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(24 39 53);
+}
+.nav2 {
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+}
+
+.section1 {
+  width: 100%;
+  background-size: auto, auto, cover;
+  background-position: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/hero-image2.jpg"), url("../images//grid.jpg");
+  min-height: 69vh;
+  /* background-image: url("../images/hero-image2.jpg"), url("../images//grid.png"); */
+}
+.hr {
+  margin: auto;
+
+  height: 10px;
+
+  background-color: aqua;
+}
+
+.introtext {
+  position: absolute;
+  top: 52%;
+  text-align: center;
+  width: 100%;
+  min-height: 100px;
+  font-size: 24px;
+  color: #fff;
+  line-height: 28px;
+  margin-top: -175px;
+}
+.start {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgb(51, 204, 204);
+  padding: 8px 24px;
+  font-size: 18px;
+  line-height: 25px;
+
+  font-family: Roboto;
+}
+.section2 {
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  box-sizing: border-box;
+  height: 200px;
+  border: 1px solid black;
+  background-color: rgb(24 39 53);
+  display: flex;
+  flex-wrap: wrap;
+
+  align-content: center;
+}
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.boxes1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  width: 1000px;
+}
+.boxes2 {
+  position: relative;
+
+  height: 500px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 10px;
+  row-gap: 20px;
+  width: 1000px;
+}
+.box1 {
+  background-color: #232835;
+  color: aliceblue;
+}
+.box2 {
+  background-color: #34d0d0;
+}
+.sector3 {
+  margin-top: 20px;
+
+  width: 300px;
+  height: 200px;
+}
+.sector4 {
+  border: 1px solid black;
+}
+.box4,
+.box7 {
+  width: 250px;
+}
+.box6 {
+  background-color: #232835;
+  color: aliceblue;
+}
+.box7 {
+  background-color: #34d0d0;
+}
+.box3 {
+  background-size: cover;
+  background-position: center;
+  animation-name: box3;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes box3 {
+  0% {
+    background-image: url("https://ongrid.in/images/home/whyOngridConstructor.jpg");
+    background-size: cover;
+    animation-duration: 3s;
+  }
+  55% {
+    background-image: url("https://ongrid.in/images/home/whyOngridFactoryWorker.jpg");
+    background-size: cover;
+    animation-duration: 5s;
+  }
+  100% {
+    background-image: url("https://ongrid.in/images/home/whyOngridWaiter.jpg");
+    animation-duration: 2s;
+  }
+}
+.box4 {
+  background-size: cover;
+  background-position: center;
+  animation-name: box4;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes box4 {
+  0% {
+    background-image: url("https://ongrid.in/images/home/housekeeping.jpg");
+    background-size: cover;
+    animation-duration: 3s;
+  }
+  55% {
+    background-image: url("https://ongrid.in/images/home/Armed-Vip-Security-Guards.png");
+    background-size: cover;
+    animation-duration: 5s;
+  }
+  100% {
+    background-image: url("https://ongrid.in/images/home/whyOngridArchitect.jpg");
+    animation-duration: 2s;
+  }
+}
+.box5 {
+  width: 350px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-size: cover;
+  background-position: center;
+  animation-name: box5;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes box5 {
+  0% {
+    background-image: url("https://ongrid.in/images/home/whyOngridCashier.jpg");
+    background-size: cover;
+    animation-duration: 3s;
+  }
+  55% {
+    background-image: url("https://ongrid.in/images/home/whyOngridEngineer.jpg");
+    background-size: cover;
+    animation-duration: 5s;
+  }
+  100% {
+    background-image: url("https://ongrid.in/images/home/whyOngridTaxiDriver.jpg");
+    animation-duration: 2s;
+  }
+}
+.box6 {
+  width: 375px;
+  height: 200px;
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.box8 {
+  width: 250px;
+  height: 280px;
+  background-color: #34d0d0;
+}
+
+.box9 {
+  width: 115px;
+  background-size: cover;
+  background-position: center;
+  animation-name: box9;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes box9 {
+  0% {
+    background-image: url("https://ongrid.in/images/home/whyOngridTeacher.jpg");
+    background-size: cover;
+    animation-duration: 3s;
+  }
+  55% {
+    background-image: url("https://ongrid.in/images/home/whyOngridDeliveryMan.jpg");
+    background-size: cover;
+    animation-duration: 5s;
+  }
+  100% {
+    background-image: url("https://ongrid.in/images/home/housekeeping.png");
+    animation-duration: 2s;
+  }
+}
+.section3 {
+  height: auto;
+}
+.section4 {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section4box {
+  /* border: 1px solid black; */
+  height: 500px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 1000px;
+}
+.sectionheading {
+  font-family: robot;
+  font-weight: 100;
+  font-size: xx-large;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.sectionintro {
+  font-size: medium;
+  width: 970px;
+  margin-bottom: 30px;
+}
+
+#hr {
+  width: 30px;
+  height: 5px;
+  border-radius: 10%;
+  background-color: aquamarine;
+  position: absolute;
+  left: 50%;
+}
+.btn {
+  padding: 0px;
+  height: 300px;
+  width: 300px;
+  border: 0;
+}
+.sec4box1,
+.sec4box2,
+.sec4box3 {
+  /* border: 1px solid black; */
+  height: 300px;
+  width: 300px;
+  color: white;
+  display: flex;
+  border: 1px solid black;
+  height: 300px;
+  width: 300px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: xx-large;
+  /* font-style: normal; */
+  font-family: math;
+  z-index: -1;
+}
+
+.sec4box1 {
+  background-image: url("https://ongrid.in/images/home/offerings-onGrid.jpg");
+
+  background-size: cover;
+}
+.pop1 {
+  border: 1px solid black;
+  color: white;
+  position: absolute;
+  width: 1000px;
+  height: 500px;
+  z-index: 2;
+  background-image: url("https://ongrid.in/images/home/offerings-onGrid1.jpg");
+  background-size: cover;
+}
+.sec4box2 {
+  background-image: url("https://ongrid.in/images/home/offerings-gridlines.jpg");
+  background-size: cover;
+}
+.sec4box3 {
+  background-image: url("https://ongrid.in/images/home/offerings-eLockr.jpg");
+  background-size: cover;
+}
+.popupheader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.demolink {
+  border-radius: 65px;
+  padding: 10px;
+  background: #34d0d0 0 0 no-repeat padding-box;
+  opacity: 1;
+  top: 20px;
+  border-radius: 95px;
+  height: fit-content;
+  /* right: 30px;
+  top: 20px;
+  position: absolute; */
+  text-decoration: none;
+}
+.closebtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.popuphr {
+  height: 5px;
+  background-color: #34d0d0;
+}
+.popbody {
+  display: flex;
+}
+
+.pop1body1 {
+  height: auto;
+  /* padding-left: 44px; */
+  margin-top: 15px;
+  text-align: justify;
+  width: fit-content;
+  font-size: large;
+}
+.pop1body2 {
+  height: auto;
+
+  margin-top: 15px;
+  text-align: justify;
+  width: fit-content;
+  font-size: large;
+}
+.pop2text {
+  font-size: x-large;
+
+  margin-top: 70px;
+}
+.pop2footer {
+  margin-bottom: 30px;
+  font-size: large;
+}
+.active {
+  color: #34d0d0;
+}
+.section5 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1100px;
+}
+.section5body {
+  width: 1000px;
+  height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.section5heading {
+  font-family: robot;
+  font-weight: 100;
+  font-size: xx-large;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.section5intro {
+  font-size: medium;
+  width: 970px;
+  margin-bottom: 30px;
+}
+#sec5hr {
+  width: 30px;
+  height: 5px;
+  border-radius: 10%;
+  background-color: aquamarine;
+}
+.businessgrid {
+  border: 1px solid black;
+  position: relative;
+  width: 300px;
+  height: 250px;
+  text-align: center;
+  background-color: rgb(86, 75, 75);
+}
+.businessimage {
+  width: 300px;
+  height: 250px;
+  opacity: 0.2;
+  /* z-index: -2; */
+}
+.popups {
+  top: 27%;
+  left: 20%;
+  z-index: 2;
+  width: 60%;
+  height: 800px;
+  border: #34d0d0;
+  border: 1px solid;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.unqbtn {
+  right: 1%;
+  position: absolute;
+  width: 30px;
+  border-radius: 50%;
+
+  background-color: #34d0d0;
+  color: #fff;
+  font-size: x-large;
+  font-weight: 500;
+}
+.title {
+  position: absolute;
+  top: 50px;
+  color: #fff;
+  font-weight: 400;
+  font-size: large;
+  left: 10%;
+}
+
+.details {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font-size: large;
+  width: 100%;
+  height: 40%;
+  background-color: rgba(0, 0, 0, 0.83);
+  color: white;
+}
+
+.uniquepopup {
+  display: flex;
+  background-color: rgba(80, 78, 78, 0.984);
+  color: white;
+  flex-direction: column;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  text-align: start;
+  width: 100%;
+  height: 60%;
+  font-size: large;
+}
+.footer {
+  color: aliceblue;
+  display: flex;
+  height: 200px;
+  background-color: rgb(65, 70, 63);
+  justify-content: space-around;
+}
+.footer1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: #fff;
+}
+.a {
+  /* height: 30px; */
+  background-color: rgb(136, 131, 131);
+}
+
+.footer2 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 950px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+  }
+  .navbar {
+    height: 400px;
+  }
+  .section2 {
+    width: auto;
+    height: fit-content;
+  }
+}

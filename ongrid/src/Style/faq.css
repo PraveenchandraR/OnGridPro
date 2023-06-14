@@ -1,0 +1,16 @@
+.faqimage {
+  width: 100%;
+  height: 40%;
+}
+.options {
+  width: 30px;
+  height: 100px;
+}
+ol{
+    display: flex;
+    flex-direction: column;
+    /* align-content: flex-start; */
+    flex-wrap: wrap;
+    text-align: start;
+}
+

@@ -1,0 +1,49 @@
+.signbody {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signbox {
+  width: 800px;
+  height: 500px;
+  border: 1px grey solid;
+}
+.signboxhead {
+  background-color: #34d0d0;
+  height: 100px;
+  color: aliceblue;
+  font-size: large;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.in {
+  border: 0px;
+  border-bottom: 1px solid grey;
+  width: 500px;
+}
+.sub {
+  width: 200px;
+  height: 30px;
+  background-color: #34d0d0;
+}
+.google {
+  width: 200px;
+}
+.signupform {
+  position: absolute;
+  left: 500px;
+  border: 1px solid gray;
+  width: 500px;
+  height: 300px;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
