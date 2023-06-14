@@ -216,7 +216,7 @@
 }
 
 .placeholder {
-  color: red;
+  color: rgb(238, 244, 246);
   font-family: sans-serif;
   left: 20px;
   line-height: 14px;

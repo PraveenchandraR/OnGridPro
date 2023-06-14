@@ -40,7 +40,7 @@ verifications for ensuring trust and accountability, and for achieving HR/ISO co
             <br />
             <br></br>
           
-              <Link    className='start' to={'/signin'}>Get Started</Link>
+              <Link    className='start' to={'/signup'}>Get Started</Link>
            
           </div>      
       </div >
@@ -158,7 +158,7 @@ verifications for ensuring trust and accountability, and for achieving HR/ISO co
        
       </div>
        <button className='start'>
-        <Link to={'/sigin'}> Get Started</Link>
+        <Link to={'/signup'}> Get Started</Link>
       </button>
    
       <div>
