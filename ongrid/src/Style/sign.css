@@ -36,14 +36,20 @@
 .google {
   width: 200px;
 }
-.signupform {
-  position: absolute;
-  left: 500px;
-  border: 1px solid gray;
-  width: 500px;
-  height: 300px;
-  background-color: aliceblue;
+.signuppage {
+  position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signupform {
+  border: 1px solid gray;
+  display: flex;
+  width: 70%;
+  height: 500px;
+  background-color: aliceblue;
+
   align-items: center;
   justify-content: center;
 }

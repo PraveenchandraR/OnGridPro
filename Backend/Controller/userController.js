@@ -1,4 +1,4 @@
-const { UserModel } = require("../MongoModel/userModel");
+const { UserModel,BookModel } = require("../MongoModel/userModel");
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
@@ -83,6 +83,11 @@ const login = async(req, res)=>{
     res.status(200).send({
       success: true,
       message: "User loggedIn successfully",
+      user: {
+        name: userFound.name,
+        email: userFound.email,
+        phone:userFound.phone,
+      },
       token
     })
 
@@ -94,11 +99,37 @@ const login = async(req, res)=>{
       error
     })
   }
+  // res.setHeader('Authorization', `Bearer ${token}`);
 }
 
-const bookDemo = (req, res) =>{
+const bookDemo = async(req, res) =>{
 
-  const {name, email, phone, organisation, known} = req.body;
+  const { name, email, phone, organisation, known } = req.body;
+
+  const userFound = await UserModel.findOne({ email: email });
+  
+  try {
+    if (!userFound) {
+    return res.status(404).send({message: "User is not registered, signup first"});
+  }
+    if(!name || !email || !phone || !organisation || !known){
+      return res.status(401).send("Please enter all the deatils");
+    }
+    const demoUser = await new BookModel({
+      name,
+      email,
+      phone,
+      organisation,
+      known
+    }).save(); 
+             res.status(200).send({
+           success: true,
+            message: "User Demobooking successful",
+    });
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).send({message: "Something went wrong"});
+  }
   res.send({message: "Protected route"});
 }
 

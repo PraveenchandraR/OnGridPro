@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 const Footer = () => {
   return (
+    <div className='footermain'>
       <div className='footer'>
           <div className='footer1'>
               <h1>
@@ -25,10 +26,13 @@ const Footer = () => {
           <Link to={'/contact'}>Contactus</Link>
           <Link to={'/tnc'}>Term and Conditions</Link>
          
-           
+    
               
- </div>
-        
+      </div>
+      </div>
+      <div>
+        <hr />
+      <span>© 2023 ONGRID - Praven Chandra Ravuri</span></div>
     </div>
   )
 }

@@ -26,7 +26,7 @@ const Section4 = () => {
   return (
       <div>
            <section className='section4'  >
-          <div>
+          <div className='section4head'>
             <h1 className=' sectionheading'>Our Offerings</h1>
               <hr id='hr'></hr> <br />
                   <p className='sectionintro'>We offer identity and background verifications for various candidates - covering employees and contractors, new users, customers, merchants,
@@ -35,14 +35,14 @@ const Section4 = () => {
               <div className='section4box'>
         
             <button id='btn1' className='btn' onClick={handleClickOpen}>
-              <div className='sec4box1'><h6>OnGrid Background verification with choice of 50+ checks</h6>
+              <div className='sec4box1'><h4>OnGrid Background verification with choice of 50+ checks</h4>
                       </div>
                    
                   </button>  
                   {/* popup box1 */}
              {popup && (<div className='pop1'>
               <div className='popupheader'><h1>Digital, Real-Time or Near Real-Time</h1>
-                          <Link className='demolink' to={'/signin'} >BookDemo</Link>
+                          <Link className='demolink' to={'/bookdemo'} >BookDemo</Link>
                              <button className='closebtn' onClick={handleClickOpen} >X</button>
                       </div>      
                       
@@ -75,12 +75,13 @@ const Section4 = () => {
                   }
                   
                   
-            <button id='btn2'className='btn' onClick={handleClickOpen2} >    <div className='sec4box2'>
+                  <button id='btn2' className='btn' onClick={handleClickOpen2} >
+                      <div className='sec4box2'>
               <h5>Gridlines APIs for instant ID verification, KYC and onboarding</h5>
                   </div></button>
                   {popup2 && (<div className='pop1'>
               <div className='popupheader'><h1>Gridlines APIs for instant ID verification, KYC and onboarding</h1>
-                          <Link className='demolink' to={'/signin'} >BookDemo</Link>
+                          <Link className='demolink' to={'/bookdemo'} >BookDemo</Link>
                              <button className='closebtn' onClick={handleClickOpen2} >X</button>
                       </div>      
                       
@@ -119,7 +120,7 @@ const Section4 = () => {
                   </button>
                   {popup3 && (<div className='pop1'>
               <div className='popupheader'><h1>Digital, Real-Time or Near Real-Time</h1>
-                          <Link className='demolink' to={'/signin'} >BookDemo</Link>
+                          <Link className='demolink' to={'/bookdemo'} >BookDemo</Link>
                              <button className='closebtn' onClick={handleClickOpen3} >X</button>
                       </div>      
                       

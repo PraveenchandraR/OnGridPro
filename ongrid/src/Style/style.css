@@ -104,19 +104,18 @@ body {
 .boxes1 {
   display: flex;
   flex-direction: row;
+  width: 1100px;
   justify-content: space-between;
-  /* border: 1px solid black; */
-  width: 1000px;
 }
 .boxes2 {
   position: relative;
+  margin-top: 1%;
 
-  height: 500px;
   display: grid;
   grid-template-columns: auto auto auto auto;
   column-gap: 10px;
   row-gap: 20px;
-  width: 1000px;
+  width: 1100px;
 }
 .box1 {
   background-color: #232835;
@@ -128,11 +127,19 @@ body {
 .sector3 {
   margin-top: 20px;
 
-  width: 300px;
+  width: 355px;
   height: 200px;
 }
 .sector4 {
+  /* margin-top: 5%; */
   border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+  text-align: flex-start;
+  padding-left: 1%;
 }
 .box4,
 .box7 {
@@ -169,6 +176,7 @@ body {
   }
 }
 .box4 {
+  height: 200px;
   background-size: cover;
   background-position: center;
   animation-name: box4;
@@ -220,22 +228,33 @@ body {
   }
 }
 .box6 {
-  width: 375px;
-  height: 200px;
+  /* width: 375px; */
+  /* height: 200px;
+  
+  /* grid-row-start: 1;
+  grid-row-end: 2; */
   grid-column-start: 3;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  grid-column-end: 5;
 }
-
+.box7 {
+  height: 250px;
+}
 .box8 {
-  width: 250px;
-  height: 280px;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 340px;
+  /* height: 280px; */
   background-color: #34d0d0;
 }
 
 .box9 {
-  width: 115px;
+  width: 125px;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
   background-size: cover;
   background-position: center;
   animation-name: box9;
@@ -275,9 +294,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
-
-  width: 1000px;
+  right: 20px;
+  justify-content: space-around;
+  width: 1100px;
 }
 .sectionheading {
   font-family: robot;
@@ -306,27 +325,36 @@ body {
   width: 300px;
   border: 0;
 }
+.section4head {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
 .sec4box1,
 .sec4box2,
 .sec4box3 {
   /* border: 1px solid black; */
-  height: 300px;
-  width: 300px;
+  /* height: 500px;
+  width: 500px; */
   color: white;
-  display: flex;
+
   border: 1px solid black;
   height: 300px;
-  width: 300px;
+  width: 360px;
   color: white;
   display: flex;
   align-items: center;
   font-size: xx-large;
+
   /* font-style: normal; */
   font-family: math;
   z-index: -1;
 }
 
 .sec4box1 {
+  /* width: 330px; */
+  height: 450px;
   background-image: url("https://ongrid.in/images/home/offerings-onGrid.jpg");
 
   background-size: cover;
@@ -335,17 +363,21 @@ body {
   border: 1px solid black;
   color: white;
   position: absolute;
-  width: 1000px;
+  width: 1200px;
   height: 500px;
   z-index: 2;
   background-image: url("https://ongrid.in/images/home/offerings-onGrid1.jpg");
   background-size: cover;
 }
 .sec4box2 {
+  /* width: 350px; */
+  height: 450px;
   background-image: url("https://ongrid.in/images/home/offerings-gridlines.jpg");
   background-size: cover;
 }
 .sec4box3 {
+  /* width: 350px; */
+  height: 450px;
   background-image: url("https://ongrid.in/images/home/offerings-eLockr.jpg");
   background-size: cover;
 }
@@ -441,6 +473,10 @@ body {
   height: 5px;
   border-radius: 10%;
   background-color: aquamarine;
+  position: absolute;
+  left: 50%;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 .businessgrid {
   border: 1px solid black;
@@ -451,16 +487,19 @@ body {
   background-color: rgb(86, 75, 75);
 }
 .businessimage {
+  /* box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.5); */
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
+  filter: brightness(0.5);
   width: 300px;
   height: 250px;
-  opacity: 0.2;
+  /* opacity: 0.2; */
   /* z-index: -2; */
 }
 .popups {
   top: 27%;
-  left: 20%;
+  left: 15%;
   z-index: 2;
-  width: 60%;
+  width: 70%;
   height: 800px;
   border: #34d0d0;
   border: 1px solid;
@@ -468,6 +507,22 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  animation: slideIn 1s ease-in;
+  align-items: center;
+}
+
+@keyframes slideIn {
+  from {
+    visibility: collapse;
+    /* transform: translatez(-100%); */
+    animation-duration: 0.5s;
+    opacity: 0;
+  }
+  to {
+    /* transform: translatez(0); */
+    animation-duration: 1s;
+    opacity: 1;
+  }
 }
 .unqbtn {
   right: 1%;
@@ -484,7 +539,7 @@ body {
   position: absolute;
   top: 50px;
   color: #fff;
-  font-weight: 400;
+  font-weight: 500;
   font-size: large;
   left: 10%;
 }
@@ -493,14 +548,20 @@ body {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  align-items: flex-start;
   font-size: large;
   width: 100%;
   height: 40%;
   background-color: rgba(0, 0, 0, 0.83);
   color: white;
+  justify-content: flex-start;
+  align-content: space-between;
 }
-
+.detailspara {
+  text-align: start;
+  margin: 1%;
+  font-size: medium;
+}
 .uniquepopup {
   display: flex;
   background-color: rgba(80, 78, 78, 0.984);
@@ -512,14 +573,24 @@ body {
   text-align: start;
   width: 100%;
   height: 60%;
+  justify-content: center;
   font-size: large;
+}
+.footermain {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 300px;
+  background-color: #232835;
+  color: aliceblue;
 }
 .footer {
   color: aliceblue;
   display: flex;
   height: 200px;
-  background-color: rgb(65, 70, 63);
+  /* background-color: rgb(65, 70, 63); */
   justify-content: space-around;
+  align-items: center;
 }
 .footer1 {
   display: flex;
@@ -546,6 +617,7 @@ body {
     align-items: center;
     align-content: center;
   }
+
   .navbar {
     height: 400px;
   }

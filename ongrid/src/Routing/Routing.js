@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import FaQ from '../Components/FaQ';
+// import FaQ from '../Components/FaQ';
 import BookDemo from '../Components/bookDemo';
 import Sign from '../Components/Sign';
 import Home from '../Components/Home';
@@ -12,6 +12,7 @@ import About from '../Components/Footer/About';
 import Contact from '../Components/Footer/Contact';
 import Career from '../Components/Footer/Career';
 import TermsAnd from '../Components/Footer/TermsAnd';
+import Faq from '../Components/FAQs';
 
 
 
@@ -25,7 +26,7 @@ const Routing = () => {
         <Route path='/' element={<Home /> } />
      
         <Route path='/business' element={<Bussiness /> } />
-        <Route path='/faq' element={ <FaQ />} />
+        <Route path='/faq' element={ <Faq />} />
         <Route path='/bookdemo' element={<BookDemo />} />
         <Route path='/login' element={<Sign />} />
         <Route path='/signup' element={<Signup />} />

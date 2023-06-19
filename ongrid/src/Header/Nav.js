@@ -34,6 +34,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
+import { useAuth } from "../HOOK/Auth";
 
 const Header = () => {
 
@@ -43,6 +44,19 @@ const Header = () => {
   //   e.preventDefault();
   //   ref.current?.scrollIntoView({behaviour: 'smooth'})
   // }
+  const [auth, setAuth] = useAuth();
+  const handleLogout = () => {
+    setAuth({
+      ...auth,
+      user: null,
+      token: " ",
+      
+    });
+    console.log(auth);
+    localStorage.removeItem("auth");
+    // toast.success("Logout Successfully");
+  };
+  
 
   return (
     <>
@@ -111,9 +125,41 @@ const Header = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/login">
+
+             {!auth.user ? (
+            <>
+              <Link to="/login" className="nav-profile">
+                {/* <div className="profileLogo">
+                  <img src='' alt="User Profile" />
+                </div> */}
+                <div className="nav-link">Login</div>
+              </Link>
+            </>
+          ) : (
+            <>
+              <ul>
+                <div class="dropdown">
+                  <button class="dropbtn">
+                    <Link className="draplink">{auth?.userFound?.name}</Link>
+                  </button>
+                  <ul class="dropdown-content">
+                    <li><Link className="draplink" to={`/${auth?.userFound?.role === 1 ? 'admin' : 'user'}`}>Dashboard</Link></li>
+                    <li><Link
+                      to="/login"
+                      className="draplink"
+                      onClick={handleLogout}
+                    >
+                    Logout
+                    </Link></li>
+                  </ul>
+                </div>
+              </ul>
+            </>
+          )}
+
+                {/* <NavLink className="nav-link" to="/login">
                   LogIn
-                </NavLink>
+                </NavLink> */}
               </li>
             </ul>
           </div>

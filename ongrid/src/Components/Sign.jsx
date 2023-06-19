@@ -3,25 +3,34 @@ import Nav from '../Header/Nav';
 import '../Style/sign.css';
 import { useState } from 'react';
 import axios from 'axios';
+import Footer from './Footer';
+import { useNavigate } from 'react-router-dom';
+
+
 const Sign = () => {
 
    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+  
+  const navigate = useNavigate();
   
   
      const handleSubmit = async(event)=>{
     event.preventDefault();
     try {
       const res = await axios.post("http://localhost:8080/login", { email,password})
-      if(res && res.data.success){
+      if (res && res.data.success) {
+        console.log(res.data.name)
         alert(res.data.message);
+      navigate(`/`)
       }
       else {
         alert(res.data.message);
       }
     } catch (error) {
       alert(error.message);
-    }
+       }
+      
   }
   return (
       <div>
@@ -50,6 +59,7 @@ const Sign = () => {
           </div>
                
       </div>
+      <Footer />
     </div>
   )
 }

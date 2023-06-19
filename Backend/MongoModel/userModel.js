@@ -21,29 +21,34 @@ const userSchema = new mongoose.Schema({
 },{timestamps: true});
 
 const bookSchema = new mongoose.Schema({
-    name:{
+    name: {
         type: String,
         required: true
     },
-    email:{
+    email: {
         type: String,
         required: true
     },
-    phone:{
+    phone: {
         type: String,
         required: true
     },
-    organisation:{
+    organisation: {
         type: String,
         required: true
     },
-    known:{
+    known: {
         type: String,
         required: true
     }
-},{timestamps: true})
+}, { timestamps: true });
+
+
+
+
 
 const UserModel = mongoose.model("users", userSchema);
 const BookModel = mongoose.model("bookings", bookSchema);
 
-module.exports = {UserModel, BookModel};
+
+module.exports = {UserModel, BookModel };

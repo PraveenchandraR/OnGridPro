@@ -20,32 +20,34 @@ const Home = () => {
   
   const Location = useLocation();
   const [display, setDisplay] = useState(false);
+  const [businesdisplay, setBusinessDisplay] = useState(true);
 
   const handleClick = () => {
     setDisplay(!display);
+    setBusinessDisplay(!businesdisplay)
   }
   
 
   return (
       <div>
           <div> <Nav /> </div>
-          <br />
+          {/* <br /> */}
       <div className='homebody'>
         <div className='section1' >
-          <br />
+          
         <div className='introtext'>
         <h1>DIGITAL TRUST PLATFORM</h1>  
 Empowering employers and service providers through comprehensive identity and background
 verifications for ensuring trust and accountability, and for achieving HR/ISO compliance.
             <br />
-            <br></br>
+            <br />
           
               <Link    className='start' to={'/signup'}>Get Started</Link>
            
           </div>      
       </div >
         <hr className='hr'></hr>
-        <br />
+       
       <section className='section2' id='whygrid'>
           <div>
             Millions of people are a step away from entering the formal digital economy.
@@ -83,13 +85,15 @@ verifications for ensuring trust and accountability, and for achieving HR/ISO co
         -  Global database checks, credits checks</div>
             <div className='sector3 box3' >box3</div>
             </div>
-          <br />
+          {/* <br /> */}
           <div className='boxes2'>
           <div className='sector4 box4' ></div>
           <div className='sector4 box5' ></div>
-          <div className='sector4 box6' ><b>Asset-reuse</b><br />
+            <div className='sector4 box6' >
+              <b>Asset-reuse</b><br />
               - Allows candidate to provide electronic <br /> consent to an employer or service provider to<br />
-              access her/his information, documents, verification reports, and references</div>
+              access her/his information, documents, verification reports, and references
+            </div>
             <div className='sector4 box7' >
               <b>Partner of choice, fastest to reach</b> <br />
 - 10 million+ people verified <br />
@@ -103,21 +107,23 @@ verifications for ensuring trust and accountability, and for achieving HR/ISO co
               <li>Unlimited organization users</li>
               <li>ntuitive portal access for real time verification updates</li>
               <li>Configure reports - who gets them, which reports, how frequently</li>
-              <li></li>APIs for integrating with</ul></div>
-            <div className='sector4 box9' >box9</div>
+                <li></li>APIs for integrating with</ul>
+            </div>
+            <div className='sector4 box9' ></div>
             </div>
         </section>
         <section >
           <div id='#ourOfferings'>
- <Section4 />
+           <Section4 />
           </div>
          
             </section>
         <section className='section5' id='business' >
+          {businesdisplay && (
           <div onClick={handleClick} >
- <Bussiness />
+         <Bussiness />
           </div>
-         
+         )}
           {
             display && (<div>
                <div className='popups' >
@@ -128,7 +134,8 @@ verifications for ensuring trust and accountability, and for achieving HR/ISO co
                    <h1>
              {Location?.state?.details?.title}
                   </h1>
-                   <p>{Location?.state?.details?.Discription} </p>
+                  <div className='detailspara'>  <span>{Location?.state?.details?.Discription} </span></div>
+                 
           <hr />
           
       </div>
