@@ -130,8 +130,8 @@ function Contact() {
                 </div>
               </div>
               <div className="contactMapBox">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.046392054422!2d77.03733517554623!3d28.448017875766045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1872871970cd%3A0x29a35131333be0ed!2sOnGrid%20-%20Background%20verification%20platform!5e0!3m2!1sen!2sin!4v1686198416472!5m2!1sen!2sin" width={320} height={250} style={{border: 0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.046392054422!2d77.03733517554623!3d28.448017875766045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1872871970cd%3A0x29a35131333be0ed!2sOnGrid%20-%20Background%20verification%20platform!5e0!3m2!1sen!2sin!4v1686198416472!5m2!1sen!2sin" width={320} height={250} style={{border: 0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="maps"/>
+           
               </div>
             </div>
           </div>

@@ -143,7 +143,7 @@ const Header = () => {
                     <Link className="draplink">{auth?.userFound?.name}</Link>
                   </button>
                   <ul class="dropdown-content">
-                    <li><Link className="draplink" to={`/${auth?.userFound?.role === 1 ? 'admin' : 'user'}`}>Dashboard</Link></li>
+                    <li><Link className="draplink" to={`/${auth?.userFound?.role === 1 ? 'admin' : 'user'}`}>handleLogout</Link></li>
                     <li><Link
                       to="/login"
                       className="draplink"
